@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:res_dash_board/utils/app_styles.dart';
+
+class RangeOption extends StatelessWidget {
+  const RangeOption({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Container(
+          padding: const EdgeInsets.all(12),
+          decoration: ShapeDecoration(
+            shape: RoundedRectangleBorder(
+              side: const BorderSide(
+                width: 1,
+                color: Color(0xFFF1F1F1),
+              ),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            color: Colors.white,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const Text(
+                "Monthly",
+                style: AppStyles.styleSemiBold16,
+              ),
+              const SizedBox(width: 18),
+              Transform.rotate(
+                  angle: -90 * 3.14 / 180,
+                  child: const Icon(
+                    Icons.arrow_back_ios_new_outlined,
+                    color: Color(0xFF064061),
+                  )),
+            ],
+          ),
+        )
+      ;
+  }
+}
